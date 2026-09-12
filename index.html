@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrystalHub - Crystal PvP Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="24" height="24" rx="2" fill="#2b7fff"/>
+            <rect x="8" y="8" width="16" height="16" rx="1" fill="#1e5fd0"/>
+            <rect x="12" y="12" width="8" height="8" rx="0.5" fill="#4a9eff"/>
+            <rect x="14" y="14" width="4" height="4" rx="0.5" fill="#7ab8ff" opacity="0.7"/>
+          </svg>
+        </span>
+        <span class="logo-text">CRYSTALHUB</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#practice" class="nav-link">Practice</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://discord.crystalhub.org" class="nav-link discord-link" target="_blank" rel="noopener">Discord</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="btn btn-play-nav" id="playNowNav">PLAY NOW</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="banner" id="home">
+    <div class="banner-inner">
+      <div class="banner-left">
+        <div class="banner-play-group">
+          <div class="play-badge">
+            <span class="badge-stat" id="bannerPlayerCount">JOIN</span>
+            <button class="play-icon-btn" id="copyIpBanner" title="Copy IP">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+          </div>
+          <div class="play-text">
+            <span class="play-label">PLAY NOW</span>
+            <span class="play-sub" id="copyIpBannerText">COPY IP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-center">
+        <div class="banner-logo-visual">
+          <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="52" height="52" rx="6" fill="#1a3a6e"/>
+            <rect x="12" y="12" width="40" height="40" rx="4" fill="#0d2247"/>
+            <rect x="20" y="20" width="24" height="24" rx="2" fill="#2b7fff"/>
+            <rect x="26" y="26" width="12" height="12" rx="1" fill="#4a9eff"/>
+            <rect x="30" y="30" width="4" height="4" rx="0.5" fill="#b0d4ff" opacity="0.8"/>
+            <rect x="8" y="8" width="48" height="2" rx="1" fill="#3b82f6" opacity="0.4"/>
+            <rect x="8" y="54" width="48" height="2" rx="1" fill="#3b82f6" opacity="0.4"/>
+          </svg>
+          <div class="banner-title">CRYSTALHUB</div>
+        </div>
+      </div>
+
+      <div class="banner-right">
+        <div class="banner-discord-group">
+          <div class="discord-text">
+            <span class="discord-label">DISCORD</span>
+            <span class="discord-sub">JOIN NOW</span>
+          </div>
+          <div class="discord-badge">
+            <span class="badge-stat discord-stat" id="discordMemberCount">Community</span>
+            <a href="https://discord.crystalhub.org" target="_blank" rel="noopener" class="discord-icon-btn" id="discordBannerBtn" title="Join Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Crystal Hub</h1>
+        <p class="hero-desc">
+          A Crystal PvP practice server hosted in Europe, built for fast fights, clean gameplay and consistent practice.
+        </p>
+        <div class="hero-ip">
+          <span class="ip-label">IP:</span>
+          <span class="ip-value" id="heroIp">crystalhub.org</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="copyIpHero">COPY IP</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="crystal-grid">
+          <div class="crystal-block cb-1"></div>
+          <div class="crystal-block cb-2"></div>
+          <div class="crystal-block cb-3"></div>
+          <div class="crystal-block cb-4"></div>
+          <div class="crystal-block cb-5"></div>
+          <div class="crystal-block cb-6"></div>
+          <div class="crystal-block cb-7"></div>
+          <div class="crystal-block cb-8"></div>
+          <div class="crystal-block cb-9"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section server-info" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What is CrystalHub?</h2>
+      </div>
+      <div class="server-info-grid">
+        <div class="server-info-text">
+          <p>
+            CrystalHub is a Crystal PvP practice server hosted in Europe, focused on keeping fights fast, responsive and competitive.
+          </p>
+          <ul class="server-info-list">
+            <li>European hosting for low-latency gameplay</li>
+            <li>Crystal PvP practice with fast queues</li>
+            <li>Competitive fights in a practice-focused environment</li>
+          </ul>
+        </div>
+        <div class="server-status-card">
+          <div class="status-header">
+            <span class="status-label">SERVER STATUS</span>
+            <span class="status-badge online">
+              <span class="status-dot"></span> ONLINE
+            </span>
+          </div>
+          <div class="status-row">
+            <span class="status-key">IP</span>
+            <span class="status-value" id="statusIp">crystalhub.org</span>
+          </div>
+          <div class="status-row">
+            <span class="status-key">Status</span>
+            <span class="status-value" id="statusPlayers">Online</span>
+          </div>
+          <div class="status-row">
+            <span class="status-key">Region</span>
+            <span class="status-value">Europe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Game Modes & Features</h2>
+        <p class="section-sub">Everything you need to practice and compete.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-title">Crystal PvP</h3>
+          <p class="feature-desc">Pure crystal combat with optimized hit registration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Practice</h3>
+          <p class="feature-desc">Fast queues and instant respawns to keep you fighting.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 17.5L3 6V3h3l11.5 11.5"></path>
+              <path d="M13 19l6-6"></path>
+              <path d="M16 16l4 4"></path>
+              <path d="M19 21l2-2"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Duels</h3>
+          <p class="feature-desc">1v1 competitive duels with ranked-style matchmaking.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Fast Respawns</h3>
+          <p class="feature-desc">Minimal downtime between fights, maximum practice time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Combat Arenas</h3>
+          <p class="feature-desc">Purpose-built arenas designed for crystal PvP.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6-6 6 6"></path>
+              <path d="M6 15l6 6 6-6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Competitive Play</h3>
+          <p class="feature-desc">A competitive environment for players who want to improve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-to-play" id="practice">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How to Play</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Copy the IP</h3>
+          <p class="step-desc">Click the copy button to get the server address.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Open Minecraft</h3>
+          <p class="step-desc">Launch your game and go to multiplayer.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Join crystalhub.org</h3>
+          <p class="step-desc">Add the server and start practicing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why CrystalHub</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3 class="why-title">EU HOSTED</h3>
+          <p class="why-desc">Built for European players and responsive PvP.</p>
+        </div>
+        <div class="why-card">
+          <h3 class="why-title">PRACTICE FIRST</h3>
+          <p class="why-desc">Focused on getting into fights quickly instead of wasting time.</p>
+        </div>
+        <div class="why-card">
+          <h3 class="why-title">CLEAN COMBAT</h3>
+          <p class="why-desc">A server experience centered around Crystal PvP.</p>
+        </div>
+        <div class="why-card">
+          <h3 class="why-title">COMMUNITY</h3>
+          <p class="why-desc">A place for players who actually want to practice and improve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section discord-cta">
+    <div class="container">
+      <div class="discord-cta-box">
+        <div class="discord-cta-content">
+          <h2 class="discord-cta-title">Join the community.</h2>
+          <p class="discord-cta-desc">Find players, get updates and stay up to date with CrystalHub.</p>
+          <a href="https://discord.crystalhub.org" target="_blank" rel="noopener" class="btn btn-discord" id="discordCtaBtn">JOIN DISCORD</a>
+        </div>
+        <div class="discord-cta-visual">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="#4a9eff" opacity="0.3">
+            <path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What version does CrystalHub support?</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Crystalhub.org supports these versions: 1.21.x</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Where is the server hosted?</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The server is hosted in Europe.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is CrystalHub free to play?</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, crystalhub.org is 100% free to play.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do I join?</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>To join, go to your multiplayer list, add a server with name "Crystalhub" and most important put the server address to "crystalhub.org".</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Where can I find updates?</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Find updates about the server in our discord!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">CRYSTALHUB.ORG</span>
+          <p class="footer-tagline">Crystal PvP practice server hosted in Europe.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#practice" class="footer-link">Practice</a>
+          <a href="https://discord.crystalhub.org" class="footer-link" target="_blank" rel="noopener">Discord</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CrystalHub</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">IP copied</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
