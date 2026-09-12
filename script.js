@@ -18,7 +18,7 @@
   function copyIp() {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(IP_ADDRESS).then(function () {
-        showToast("IP copied: " + IP_ADDRESS);
+        showToast("Crystalhub.org Copied");
       }).catch(function () {
         fallbackCopy();
       });
