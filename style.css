@@ -687,6 +687,11 @@ ul {
   color: var(--online);
 }
 
+.status-badge.red {
+  background: rgba(220, 38, 38, 0.12);
+  color: #ef4444;
+}
+
 .status-dot {
   width: 6px;
   height: 6px;
